@@ -1,0 +1,10 @@
+.iconsContainer{
+    display: flex;
+    margin: 5px;
+}
+
+.icon{
+    width: 1.5rem;
+    filter: invert();
+    margin: 0.5rem;
+}

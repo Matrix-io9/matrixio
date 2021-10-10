@@ -1,0 +1,44 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.heading{
+    color: white;
+    font-size: 9rem;
+}
+
+.bimg{
+    background-image: url('https://res.cloudinary.com/dngbmzf6x/image/upload/v1631625770/Matrix.io/bimg4_jlulsm.jpg');
+    background-size: cover;
+    height: 40rem;
+    width: 100%;
+}
+
+.navbarContainer{
+    width: 100%;
+    display: flex;
+}
+
+.introBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40rem;
+    text-align: center;
+}
+
+.footerContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 700px) {
+    .heading{
+        font-size: 2.8rem;
+    }
+}
