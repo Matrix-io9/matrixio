@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "short_name": "Matrix.io",
   "name": "Matrix.io | Official Website",
+=======
+  "short_name": "React App",
+  "name": "Create React App Sample",
+>>>>>>> 49d7a0d1a81cfb54255dac063afcf939c9d2d591
   "icons": [
     {
       "src": "favicon.ico",

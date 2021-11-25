@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import { hydrate, render } from 'react-dom';
+<<<<<<< HEAD
+=======
+import './index.css';
+>>>>>>> 49d7a0d1a81cfb54255dac063afcf939c9d2d591
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
