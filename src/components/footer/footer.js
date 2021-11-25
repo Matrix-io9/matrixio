@@ -1,10 +1,14 @@
 import React from "react";
-import * as footerStyles from './footer.module.css';
-import Icon from "../icons/icon.js";
+import 
+{
+    footer
+}
+from './Footer.module.css';
+import Icon from "../Icons/Icon.js";
 
 const Footer = ()=>{
     return(
-        <div className={footerStyles.footer}>
+        <div className={footer}>
             <p>
                 Made with ❤ by Subin
             </p>

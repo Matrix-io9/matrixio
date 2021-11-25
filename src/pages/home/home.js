@@ -1,31 +1,42 @@
 import React from "react";
-import Footer from "../../components/footer/footer.js";
-import Navbar from "../../components/navbar/navbar.js";
-import About from "../../components/about/about.js";
-import Event from '../../components/events/event.js';
-import * as homeStyles from './home.module.css';
-import './home.css';
-import DiscordBtn from "../../components/discordBtn/discordBtn.js";
+import Main from '../../layouts/Main'
+import DiscordBtn from "../../components/DiscordBtn/DiscordBtn.js";
+import About from "../../components/About/About.js";
+import Event from '../../components/Events/Event.js';
+import Footer from "../../components/Footer/Footer.js";
+
+import './Home.css';
+
+import {
+container,
+bimg,
+introBox,
+heading,
+footerContainer
+} from './Home.module.css';
 
 const HomePage = () => {
   return (
-    <div className={homeStyles.container}>
-      <div className={homeStyles.bimg}>
-        <div className={homeStyles.navbarContainer}>
-          <Navbar toggleText='Team' toggleLink='team'/>
+    <Main description={"The Ultimate Student Community | Empowering other student communities"}>
+      <div className={container}>
+      
+        <div className={bimg}>
+          <div className={introBox}>
+            <p className={heading}>Matrix.io</p>
+            <DiscordBtn url='https://discord.gg/Mjpjmdrk' />
+          </div>
         </div>
-        <div className={homeStyles.introBox}>
-          <p className={homeStyles.heading}>Matrix.io</p>
-          <DiscordBtn url='https://discord.gg/Mjpjmdrk'/>
-        </div>
-      </div>
 
-      <About/>
-      <Event />
-      <div className={homeStyles.footerContainer}>
-        <Footer />
+        <About />
+
+        <Event />
+
+        <div className={footerContainer}>
+          <Footer />
+        </div>
+    
       </div>
-    </div>
+    </Main>
   )
 }
 

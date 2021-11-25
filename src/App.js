@@ -1,23 +1,21 @@
 import React, { Suspense, lazy } from 'react';
-// import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Loader from './components/Loader/Loader';
 import './App.css';
-import Main from "./layouts/Main";
-import { BrowserRouter as Router, Route,Switch} from 'react-router-dom';
-
-const Index = lazy(() => import('./pages/home/home'));
-const Team = lazy(() => import('./pages/team/team'));
-const NotFound = lazy(() => import('./pages/404'));
+const Home = lazy(() => import('./pages/Home/Home'));
+const Team = lazy(() => import('./pages/Team/Team'));
+// const Error = lazy(() => import('./pages/404'));
 
 function App() {
   return (
     <Router>
-       <Suspense fallback={<Main />}>
       <Switch>
-        <Route exact path="/" component={Index} />
-        <Route path="/team" component={Team} />
-        <Route component={NotFound} status={404} />
+        <Suspense fallback={<Loader />}>
+          <Route exact path="/" component={Home} status={200} />
+          <Route path="/team" component={Team} />
+          {/* <Route component={Error} status={404} /> */}
+        </Suspense>
       </Switch>
-    </Suspense>
     </Router>
 
   )

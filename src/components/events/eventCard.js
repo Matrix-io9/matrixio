@@ -1,25 +1,34 @@
 import React from 'react';
-import * as eventCardStyles from './eventCard.module.css'
-import DiscordBtn from '../discordBtn/discordBtn';
+import {
+    container,
+    card,
+    imgBx,
+    contentBx,
+    btn,
+    link
+} from './EventCard.module.css';
+
+import DiscordBtn from '../DiscordBtn/DiscordBtn';
+import { Link } from 'react-router-dom';
 
 function EventCard(props) {
     return (
-        <div className={eventCardStyles.container}>
-            <div className={eventCardStyles.card}>
-                <div className={eventCardStyles.imgBx}>
-                    <img src="https://elytrahack.matrixio.tech/img/logos/wide-small.png" alt="ElytraHack'21" />
+        <div className={container} style={{ content: `${props.eventName}` }}>
+            <div className={card} style={{ content: `${props.eventName}` }}>
+                <div className={imgBx}>
+                    <img src={props.image} alt="ElytraHack'21" />
                 </div>
-                <div className={eventCardStyles.contentBx}>
+                <div className={contentBx}>
                     <h2>{props.eventName}</h2>
-                    <div className={eventCardStyles.btn}>
-                        <DiscordBtn url='https://discord.gg/Rp4VPSYfvm' />
+                    <div className={btn}>
+                        <DiscordBtn url={props.discordurl} />
                     </div>
-                    <div className={eventCardStyles.link}>
+                    <div className={link}>
 
-                        <a onClick={() => window.open("https://elytrahack.matrixio.tech/", "_blank")}>
-                            ElytraHack'21
+                        <Link onClick={() => window.open(props.websiteurl, "_blank")}>
+                            {props.eventName}
                             <img src="https://img.icons8.com/material-outlined/24/000000/external-link.png" alt="" />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

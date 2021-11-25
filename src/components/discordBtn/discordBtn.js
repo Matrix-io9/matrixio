@@ -1,5 +1,5 @@
 import React from "react";
-import './discordBtn.css'
+import './DiscordBtn.css'
 
 const DiscordBtn = ({ isSSO, url }) => (
   <a

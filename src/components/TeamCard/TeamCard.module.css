@@ -17,14 +17,14 @@
     min-width: 10rem;
 }
 
+.cardHeading{
+    font-size: 2rem;
+}
+
 .cardTextBox{
     display: flex;
     flex-direction: column;
     padding: 8px 0 0;
-}
-
-.cardHeading{
-    font-size: 2rem;
 }
 
 .cardText{

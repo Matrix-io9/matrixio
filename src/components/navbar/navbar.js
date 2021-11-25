@@ -1,9 +1,18 @@
-import React, { useState} from "react";
-// import  {FaBars}  from 'react-icons/fa';
-import Logo from '../logo/logo.js';
+import React,{useState} from "react";
+import { Link } from "react-router-dom";
+
+// import {FaBars} from 'react-icons/fa';
 // import styled from 'styled-components';
-import { useScrollPosition } from "./useScrollEffect";
-import * as navbarStyles from './navbar.module.css';
+
+import 
+{
+  navbar,
+  navLink,
+  navLinks,
+  active,
+  autofix
+} from './Navbar.module.css';
+import Logo from '../Logo/Logo.js';
 
 // const Bars = styled(FaBars)`
 //   display: none;
@@ -20,21 +29,26 @@ import * as navbarStyles from './navbar.module.css';
 // `;
 
 const Navbar = (props) => {
-    const [scroll, setScroll] = useState(0);
+    const [Navbar, setNavbar]= useState(false);
+    const changeBackground = () =>{
+      if(window.scrollY >= 80){
+        setNavbar(true);
+      }
+      else{
+        setNavbar(false);
+      }
+    }
 
-    useScrollPosition(function setScrollPosition({ currentPosition }) {
-        setScroll(currentPosition.y);
-    });
+    window.addEventListener('scroll', changeBackground);
 
     return (
-        <div className={`${navbarStyles.navbar} ${navbarStyles.autofix} ${scroll > 80 ? 'someClass' : ''}`}>
-            <Logo />
-            <div className={navbarStyles.navLinks}>
-                <a className={navbarStyles.navLink} href={`/${props.toggleLink}`}>{props.toggleText}</a>
-                <a  className={navbarStyles.navLink} href='#events'>Events</a>
-            </div>
+        <div className={Navbar ? `${navbar} ${active} ${autofix}` : `${navbar} ${autofix}`}>
+        <Logo />
+        <div className={navLinks}>
+            <Link className={navLink} to={`/${props.toggleLink}`}>{props.toggleText}</Link>
+            <Link  className={navLink} to='#events'>Events</Link>
         </div>
+    </div>
     )
 }
-
 export default Navbar;
