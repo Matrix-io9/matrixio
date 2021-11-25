@@ -1,7 +1,8 @@
 import React from 'react';
 import EventCard from './EventCard';
 
-import {
+import 
+{
     container,
     heading,
     eventCards
@@ -14,8 +15,7 @@ function Event() {
                 Events
             </p>
             <div className={eventCards}>
-                <EventCard eventName="ElytraHack'21" image="https://elytrahack.matrixio.tech/img/logos/wide-small.png" websiteurl="https://elytrahack.matrixio.tech/" discordurl='https://discord.gg/Rp4VPSYfvm' />
-                <EventCard eventName="CommOS: Hacktoberfest" image="https://matrix-io9.github.io/Commos.github.io/dist/images/Logo.png" websiteurl="https://matrix-io9.github.io/Commos.github.io/" discordurl='https://discord.gg/Rp4VPSYfvm' />
+                <EventCard eventName="ElytraHack'21" />
             </div>
         </div>
     )

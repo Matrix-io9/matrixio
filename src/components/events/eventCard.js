@@ -1,5 +1,6 @@
 import React from 'react';
-import {
+import 
+{
     container,
     card,
     imgBx,
@@ -13,20 +14,20 @@ import { Link } from 'react-router-dom';
 
 function EventCard(props) {
     return (
-        <div className={container} style={{ content: `${props.eventName}` }}>
-            <div className={card} style={{ content: `${props.eventName}` }}>
+        <div className={container}>
+            <div className={card}>
                 <div className={imgBx}>
-                    <img src={props.image} alt="ElytraHack'21" />
+                    <img src="https://elytrahack.matrixio.tech/img/logos/wide-small.png" alt="ElytraHack'21" />
                 </div>
                 <div className={contentBx}>
                     <h2>{props.eventName}</h2>
                     <div className={btn}>
-                        <DiscordBtn url={props.discordurl} />
+                        <DiscordBtn url='https://discord.gg/Rp4VPSYfvm' />
                     </div>
                     <div className={link}>
 
-                        <Link onClick={() => window.open(props.websiteurl, "_blank")}>
-                            {props.eventName}
+                        <Link onClick={() => window.open("https://elytrahack.matrixio.tech/", "_blank")}>
+                            ElytraHack'21
                             <img src="https://img.icons8.com/material-outlined/24/000000/external-link.png" alt="" />
                         </Link>
                     </div>

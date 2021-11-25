@@ -1,6 +1,6 @@
 .navbar{
+    position: fixed;
     display: flex;
-    position:fixed;
     flex-direction: row;
     align-items: center;
     width: 100%;
@@ -9,20 +9,13 @@
     z-index: 99;
     color: white;
     justify-content: space-between;
-    margin: -2;
 }
-
 .active{
     background: white;
     color: black;
-    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.199);
+    box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.199);
     border-bottom: 1px solid #00000017;
 }
-
-.autofix{
-    padding: 9px 24px;
-}
-
 .navLinks{
     display: flex;
 
@@ -43,3 +36,11 @@
 .navLink:hover{
     color: brown;
 }
+
+
+.autofix{
+    padding: 9px 24px;
+}
+
+
+

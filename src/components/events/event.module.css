@@ -1,20 +1,20 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 6rem 0;
-  background-image: url("../../images/bimg.svg");
-  background-size: contain;
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 0 ;
+    background-image: url('../../images/bimg.svg');
+    background-size: contain;
 }
 
-.heading {
-  font-size: 4.5rem;
-  text-align: center;
+.heading{
+    font-size: 4.5rem;
+    text-align: center;
 }
 
-.eventCards {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 3rem 0;
+.eventCards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
 }

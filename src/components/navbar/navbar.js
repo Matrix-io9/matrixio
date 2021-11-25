@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import Logo from '../Logo/Logo.js';
 import { Link } from "react-router-dom";
 
 // import {FaBars} from 'react-icons/fa';
@@ -6,13 +7,12 @@ import { Link } from "react-router-dom";
 
 import 
 {
-  navbar,
-  navLink,
-  navLinks,
-  active,
-  autofix
+    navbar,
+    navLink,
+    navLinks,
+    active,
+    autofix
 } from './Navbar.module.css';
-import Logo from '../Logo/Logo.js';
 
 // const Bars = styled(FaBars)`
 //   display: none;

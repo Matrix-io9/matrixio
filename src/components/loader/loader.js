@@ -1,5 +1,6 @@
 import React from 'react';
-import {
+import 
+{
   dots,
   dotS,
   dotF,
@@ -7,40 +8,45 @@ import {
   dotZ,
   dotT,
 
-}
-  from './Loader.module.css'
+} 
+from './Loader.module.css'
 
-const Loader = () => {
+const Loader = ()=>{
+//   let $ = (e) => document.querySelector(e);
 
-  // const [dots, animateDots] = useState('dots');
+// // Dots
+// // ====
+// let dots = $(".dots");
 
-  // useEffect(() => {
-  //   function animationOfDots(){
-  //     animateDots(dots, "dots--animate");
+// // Function
+// // ========
+// function animate(element, className) {
+//   element.classList.add(className);
+//   setTimeout(() => {
+//     element.classList.remove(className);
+//     setTimeout(() => {
+//       animate(element, className);
+//     }, 500);
+//   }, 2500);
+// }
 
-  //     setTimeout(() => {
-  //       animateDots(dots, "");
+// // Execution
+// // =========
+// animate(dots, "dots--animate");
 
-  //       setTimeout(() => {
-  //         animateDots(dots, "dots--animate");
-
-  //       }, 500);
-  //     }, 2500);
-  //   }
-  // });
-
-  return (
+  return(
     <>
-      <h1>Loading
-        <div className={dots}>
-          <span className={dotZ}></span>
-          <span className={dotF}></span>
-          <span className={dotS}></span>
-          <span className={dotT}>
-            <span className={dotL}></span>
-          </span>
-        </div>
-      </h1>
+    <h1>Loading
+      <div className={dots}>
+        <span className={dotZ}></span>
+        <span className={dotF}></span>
+        <span className={dotS}></span>
+        <span className={dotT}>
+          <span className={dotL}></span>
+          Loading...
+        </span>
+      </div>
+    </h1>
     </>
   )
 }
