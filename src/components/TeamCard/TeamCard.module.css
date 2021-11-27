@@ -1,0 +1,32 @@
+.teamCard{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    padding: 1rem;
+    max-width: 25rem;
+    min-height: 20rem;
+    height: 15rem;
+    width: 20rem;
+    align-items: center;
+    border-radius: 2px;
+    box-shadow: 0 0 4px 0px #0000006b;
+}
+
+.image{
+    max-width: 12rem;
+    min-width: 10rem;
+}
+
+.cardHeading{
+    font-size: 2rem;
+}
+
+.cardTextBox{
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0 0;
+}
+
+.cardText{
+    font-size: 1rem;
+}
