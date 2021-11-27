@@ -1,42 +1,40 @@
 import React from 'react';
-import 
-{
-  dots,
-  dotS,
-  dotF,
-  dotL,
-  dotZ,
-  dotT,
+import {
+dots,
+dotS,
+dotF,
+dotL,
+dotZ,
+dotT,
 
-} 
-from './Loader.module.css'
+}
+  from './Loader.module.css'
 
-const Loader = ()=>{
-//   let $ = (e) => document.querySelector(e);
+const Loader = () => {
+  //   let $ = (e) => document.querySelector(e);
 
-// // Dots
-// // ====
-// let dots = $(".dots");
+  // // Dots
+  // // ====
+  // let dots = $(".dots");
 
-// // Function
-// // ========
-// function animate(element, className) {
-//   element.classList.add(className);
-//   setTimeout(() => {
-//     element.classList.remove(className);
-//     setTimeout(() => {
-//       animate(element, className);
-//     }, 500);
-//   }, 2500);
-// }
+  // // Function
+  // // ========
+  // function animate(element, className) {
+  //   element.classList.add(className);
+  //   setTimeout(() => {
+  //     element.classList.remove(className);
+  //     setTimeout(() => {
+  //       animate(element, className);
+  //     }, 500);
+  //   }, 2500);
+  // }
 
-// // Execution
-// // =========
-// animate(dots, "dots--animate");
+  // // Execution
+  // // =========
+  // animate(dots, "dots--animate");
 
-  return(
+  return (
     <>
-    <h1>Loading
       <div className={dots}>
         <span className={dotZ}></span>
         <span className={dotF}></span>
@@ -46,7 +44,6 @@ const Loader = ()=>{
           Loading...
         </span>
       </div>
-    </h1>
     </>
   )
 }
