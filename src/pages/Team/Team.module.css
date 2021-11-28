@@ -1,16 +1,50 @@
-.teamContainer{
-    padding: 7rem 0 0;
+body {
+  display: block;
+  min-height: auto;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: auto;
 }
 
-.teamCards{
-    display: flex; 
-    flex-wrap: wrap;
-    padding: 2rem 0 0;
-    justify-content: space-evenly;
-    width: 100%; 
+.teamContainer {
+  padding: 7rem 0 0;
+  background: url("../../images//bimg/bimg3.jpg");
+  background-size: contain;
 }
 
-.teamHeading{
-    text-align: center;
-    font-size: 3rem;
+.teamCards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 0 0;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.teamContentHeading {
+  text-align: center;
+  font-size: 8rem;
+  color: white;
+  font-weight: bolder;
+  padding: 3rem;
+  border: 3px solid white;
+  border-radius: 13px;
+}
+
+.teamContentIntro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 4rem;
+  height: 42rem;
+  background: url("../../images/bimg/bimg2.jpg");
+  background-size: contain;
+}
+
+.teamContentAbout {
+  color: white;
+  font-size: 2rem;
+  padding: 1.4rem;
 }
