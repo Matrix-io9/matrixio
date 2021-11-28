@@ -23,12 +23,20 @@ const TeamCard = (props) => {
                 <p className={cardText}>{props.desc}</p>
             </div>
             <div className={socialMediaLinks}>
-                <a href={props.linkedin} target="_blank" className={link} rel="noreferrer">
-                    <img className={icon} src={Linkedin} alt="linkedin"></img>
-                </a>
-                <a href={props.twitter} target="_blank" rel="noreferrer" className={link}>
-                    <img className={icon} src={Twitter} alt="twitter"></img>
-                </a>
+                {
+                    props.linkedin ?
+                        <a href={props.linkedin} target="_blank" className={link} rel="noreferrer">
+                            <img className={icon} src={Linkedin} alt="linkedin"></img>
+                        </a>
+                        : <></>
+                }
+                {
+                    props.twitter ?
+                        <a href={props.twitter} target="_blank" rel="noreferrer" className={link}>
+                            <img className={icon} src={Twitter} alt="twitter"></img>
+                        </a> :
+                        <></>
+                }
             </div>
         </div>
     )
