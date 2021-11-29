@@ -1,6 +1,5 @@
 import React from 'react';
-import 
-{
+import {
     container,
     card,
     imgBx,
@@ -17,7 +16,7 @@ function EventCard(props) {
         <div className={container}>
             <div className={card}>
                 <div className={imgBx}>
-                    <img src="https://elytrahack.matrixio.tech/img/logos/wide-small.png" alt="ElytraHack'21" />
+                    <img src={props.logo} alt="ElytraHack'21" />
                 </div>
                 <div className={contentBx}>
                     <h2>{props.eventName}</h2>
@@ -25,9 +24,8 @@ function EventCard(props) {
                         <DiscordBtn url='https://discord.gg/Rp4VPSYfvm' />
                     </div>
                     <div className={link}>
-
-                        <Link onClick={() => window.open("https://elytrahack.matrixio.tech/", "_blank")}>
-                            ElytraHack'21
+                        <Link onClick={() => window.open(props.eventWebsite, "_blank")}>
+                            {props.eventName}
                             <img src="https://img.icons8.com/material-outlined/24/000000/external-link.png" alt="" />
                         </Link>
                     </div>
