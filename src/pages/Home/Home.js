@@ -30,6 +30,7 @@ import {
 } from './Home.module.css';
 import CommunityPartners from "../../components/CommunityPartners/CommunityPartners";
 import JoinCommunity from "../../components/JoinCommunity/JoinCommunity";
+import Newsletter from "../../components/Newsletter/Newsletter";
 
 const HomePage = () => {
   const isMobile = useMediaQuery('(max-width: 700px)');
@@ -62,6 +63,7 @@ const HomePage = () => {
           <About />
           <Event />
           <CommunityPartners />
+          <Newsletter />
           <JoinCommunity />
           <div className={waves}>
             <svg className={wave} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00a7eb" fill-opacity="1" d="M0,192L60,165.3C120,139,240,85,360,74.7C480,64,600,96,720,138.7C840,181,960,235,1080,234.7C1200,235,1320,181,1380,154.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>

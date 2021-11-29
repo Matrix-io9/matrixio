@@ -1,0 +1,69 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1.5rem;
+  background: white;
+  width: 100%;
+}
+.containerInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.heading {
+  color: #007ff7;
+  font-size: 2.6rem;
+  font-weight: bolder;
+  padding: 2rem 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  border: none;
+  width: 50%;
+  border-radius: 2rem;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.733);
+}
+
+.field {
+  border: 1px solid grey;
+  width: 13rem;
+  height: 2rem;
+  margin: 0.6rem 0rem;
+  border-radius: 1rem;
+  padding: 8px;
+}
+
+.field:focus {
+  border: 1px solid #007ff7;
+}
+
+.submit {
+  width: 5rem;
+  height: 2rem;
+  background: #007ff7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background: #0064c2;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin: 0.5rem 0rem;
+}
+
+.newslettericon {
+  width: 36rem;
+}
