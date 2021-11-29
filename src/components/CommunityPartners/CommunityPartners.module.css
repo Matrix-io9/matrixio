@@ -1,0 +1,28 @@
+.CPContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 1.5rem;
+  background-image: linear-gradient(135deg, #045de9 0%, #09c6f9 74%);
+  background-size: contain;
+}
+
+.CPHeading {
+  font-size: 2rem;
+  color: white;
+  font-weight: bolder;
+  padding: 1rem;
+}
+
+hr {
+  color: white;
+}
+
+.InnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+}

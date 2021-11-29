@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Logo from '../Logo/Logo.js';
 import { Link } from "react-router-dom";
+
 
 // import {FaBars} from 'react-icons/fa';
 // import styled from 'styled-components';
 
 import {
-navbar,
-navLink,
-navLinks,
-active,
-autofix
+  navbar,
+  navLink,
+  navLinks,
+  active,
+  autofix
 } from './Navbar.module.css';
 
 // const Bars = styled(FaBars)`
@@ -28,6 +29,7 @@ autofix
 // `;
 
 const Navbar = (props) => {
+  // const isMobiles = useContext(Devi);
   const [Navbar, setNavbar] = useState(false);
   const changeBackground = () => {
     if (window.scrollY >= 80) {
