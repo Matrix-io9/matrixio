@@ -15,7 +15,7 @@ function CommunityPartners() {
 
     const images = importAll(require.context('../../images/communitypartners/', false, /\.(png|jpe?g|svg)$/));
     return (
-        <div className={CPContainer}>
+        <div className={CPContainer} id="partners">
             <div className={CPHeading}>
                 Community Partners
             </div>

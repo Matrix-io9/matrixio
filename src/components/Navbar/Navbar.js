@@ -48,6 +48,8 @@ const Navbar = (props) => {
       <div className={navLinks}>
         <Link className={navLink} to={`/${props.toggleLink}`}>{props.toggleText}</Link>
         <Link className={navLink} to='#events'>Events</Link>
+        <Link className={navLink} to='#about'>About</Link>
+        <Link className={navLink} to='#partners'>Partners</Link>
       </div>
     </div>
   )
