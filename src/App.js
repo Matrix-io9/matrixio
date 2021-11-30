@@ -5,7 +5,7 @@ import './App.css';
 import useMediaQuery from "./hooks/useMediaQuery.js";
 const Home = lazy(() => import('./pages/Home/Home'));
 const Team = lazy(() => import('./pages/Team/Team'));
-// const Error = lazy(() => import('./pages/404'));
+const Error = lazy(() => import('./pages/404'));
 
 function App() {
   const isMobile = useMediaQuery('(max-width: 700px)');
