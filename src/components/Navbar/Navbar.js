@@ -3,8 +3,8 @@ import Logo from '../Logo/Logo.js';
 import { Link } from "react-router-dom";
 
 
-// import {FaBars} from 'react-icons/fa';
-// import styled from 'styled-components';
+import { FaBars } from 'react-icons/fa';
+import styled from 'styled-components';
 
 import {
   navbar,
@@ -14,19 +14,19 @@ import {
   autofix
 } from './Navbar.module.css';
 
-// const Bars = styled(FaBars)`
-//   display: none;
-//   color: white;
-//   @media screen and (max-width: 768px) {
-//     display: block;
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     transform: translate(-100%, 75%);
-//     font-size: 1.8rem;
-//     cursor: pointer;
-//   }
-// `;
+const Bars = styled(FaBars)`
+  display: none;
+  color: white;
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 75%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+`;
 
 const Navbar = (props) => {
   // const isMobiles = useContext(Devi);

@@ -5,7 +5,7 @@ import './App.css';
 import useMediaQuery from "./hooks/useMediaQuery.js";
 const Home = lazy(() => import('./pages/Home/Home'));
 const Team = lazy(() => import('./pages/Team/Team'));
-const Error = lazy(() => import('./pages/404'));
+// const Error = lazy(() => import('./pages/404'));
 
 function App() {
   const isMobile = useMediaQuery('(max-width: 700px)');
@@ -18,7 +18,7 @@ function App() {
           <DeviceContext.Provider value={isMobile}>
             <Route exact path="/" component={Home} status={200} />
             <Route path="/team" component={Team} />
-            <Route path="*" component={Error} status={404} />
+            {/* <Route path="*" component={Error} status={404} /> */}
           </DeviceContext.Provider>
         </Suspense>
       </Switch>
