@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import Navbar from '../components/Navbar/Navbar';
+import './Main.css';
 
 const Main = (props) => (
   <HelmetProvider>
@@ -12,9 +13,7 @@ const Main = (props) => (
     </Helmet>
     <Navbar toggleText='Team' toggleLink='team' />
     <div id="wrapper">
-      <div id="main">
-        {props.children}
-      </div>
+      {props.children}
     </div>
   </HelmetProvider>
 );

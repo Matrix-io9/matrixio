@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import Logo from '../Logo/Logo.js';
 import { Link } from "react-router-dom";
 
@@ -39,7 +39,6 @@ const Navbar = (props) => {
       setNavbar(false);
     }
   }
-
   window.addEventListener('scroll', changeBackground);
 
   return (
@@ -51,6 +50,9 @@ const Navbar = (props) => {
         <Link className={navLink} to='#about'>About</Link>
         <Link className={navLink} to='#partners'>Partners</Link>
       </div>
+      {Navbar ?
+        <Bars color="rgb(4, 97, 233)" /> : <Bars />
+      }
     </div>
   )
 }

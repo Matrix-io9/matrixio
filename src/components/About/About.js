@@ -1,14 +1,14 @@
 import React from "react";
 
 import {
-container,
-heading,
-about,
-aboutContainer,
-aboutContent,
-firstLetter,
-image,
-about1,
+  container,
+  heading,
+  about,
+  aboutContainer,
+  aboutContent,
+  firstLetter,
+  image,
+  about1,
 } from './About.module.css'
 
 const About = () => {
@@ -26,7 +26,7 @@ const About = () => {
             <img className={image} src='https://res.cloudinary.com/dngbmzf6x/image/upload/v1631626247/Matrix.io/community_xwgweo.jpg' alt="about" />
           </div>
         </div>
-        <div className={aboutContainer}>
+        <div className={aboutContainer} id={aboutContainer}>
           <div className={about} id={about1}>
             <img className={image} src='https://res.cloudinary.com/dngbmzf6x/image/upload/v1631626285/Matrix.io/contest_yjiqp5.jpg' alt="about" />
             <div className={aboutContent}>

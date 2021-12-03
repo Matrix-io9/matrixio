@@ -60,3 +60,10 @@
   padding: 1rem;
   width: 70%;
 }
+
+@media only screen and (max-width: 700px) {
+  .teamCard {
+    height: 25.7rem;
+    width: 21rem;
+  }
+}
