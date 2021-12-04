@@ -1,13 +1,12 @@
 import React from "react";
-import 
-{
-    footer
+import {
+footer
 }
-from './Footer.module.css';
+    from './Footer.module.css';
 import Icon from "../Icons/Icon.js";
 
-const Footer = ()=>{
-    return(
+const Footer = () => {
+    return (
         <div className={footer}>
             <p>
                 Made with ❤ by Subin
@@ -18,5 +17,5 @@ const Footer = ()=>{
         </div>
     )
 }
-
+// i'm samsy subin
 export default Footer;
