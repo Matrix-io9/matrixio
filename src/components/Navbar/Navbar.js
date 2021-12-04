@@ -28,7 +28,7 @@ const Bars = styled(FaBars)`
 `;
 
 const Navbar = (props) => {
-  // const isMobiles = useContext(Devices);
+
   const [Navbar, setNavbar] = useState(false);
   const changeBackground = () => {
     if (window.scrollY >= 80) {
@@ -50,7 +50,7 @@ const Navbar = (props) => {
         <Link className={navLink} to='#partners'>Partners</Link>
       </div>
       {Navbar ?
-        <Bars color="rgb(4, 97, 233)" toggleText='Team' toggleLink='team' /> : <Bars toggleText='Team' toggleLink='team' />
+        <Bars onClick={props.handleSideNavbar()} color="rgb(4, 97, 233)" toggleText='Team' toggleLink='team' /> : <Bars onClick={props.handleSideNavbar()} toggleText='Team' toggleLink='team' />
       }
 
     </div>

@@ -33,14 +33,14 @@ import JoinCommunity from "../../components/JoinCommunity/JoinCommunity";
 import Newsletter from "../../components/Newsletter/Newsletter";
 import MobileNavbar from "../../components/MobileNavbar/MobileNavbar";
 
-const HomePage = () => {
+const HomePage = (props) => {
   const isMobile = useMediaQuery('(max-width: 700px)');
   const DeviceContext = createContext(false);
 
   return (
     <DeviceContext.Provider value={isMobile}>
       <Main description={"The Ultimate Student Community | Empowering other student communities"}>
-        <MobileNavbar />
+        <MobileNavbar SideNavbar={props.SideNavbar} />
         <div className={container}>
           <div className={bimg}>
             <div className={introBox}>

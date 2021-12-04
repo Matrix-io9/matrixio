@@ -2,14 +2,18 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 import {
+    container,
     navLink,
     navLinks,
-    container,
     icon
 } from './MobileNavbar.module.css';
 import CloseIcon from '../../images/icons/close.png';
 
 function MobileNavbar(props) {
+    if (props.SideNavbar) {
+        container.display = "flex";
+    }
+
     return (
         <div className={container}>
             <div className={navLinks}>
