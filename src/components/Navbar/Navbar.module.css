@@ -7,7 +7,7 @@
   width: 100%;
   background: transparent;
   height: 4rem;
-  z-index: 99;
+  z-index: 10;
   color: white;
   justify-content: space-between;
 }

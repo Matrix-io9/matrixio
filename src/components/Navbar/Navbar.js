@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Logo from '../Logo/Logo.js';
 import { Link } from "react-router-dom";
 
-
 import { FaBars } from 'react-icons/fa';
 import styled from 'styled-components';
 
@@ -29,7 +28,7 @@ const Bars = styled(FaBars)`
 `;
 
 const Navbar = (props) => {
-  // const isMobiles = useContext(Devi);
+  // const isMobiles = useContext(Devices);
   const [Navbar, setNavbar] = useState(false);
   const changeBackground = () => {
     if (window.scrollY >= 80) {
@@ -51,8 +50,9 @@ const Navbar = (props) => {
         <Link className={navLink} to='#partners'>Partners</Link>
       </div>
       {Navbar ?
-        <Bars color="rgb(4, 97, 233)" /> : <Bars />
+        <Bars color="rgb(4, 97, 233)" toggleText='Team' toggleLink='team' /> : <Bars toggleText='Team' toggleLink='team' />
       }
+
     </div>
   )
 }

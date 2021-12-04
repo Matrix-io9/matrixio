@@ -31,6 +31,7 @@ import {
 import CommunityPartners from "../../components/CommunityPartners/CommunityPartners";
 import JoinCommunity from "../../components/JoinCommunity/JoinCommunity";
 import Newsletter from "../../components/Newsletter/Newsletter";
+import MobileNavbar from "../../components/MobileNavbar/MobileNavbar";
 
 const HomePage = () => {
   const isMobile = useMediaQuery('(max-width: 700px)');
@@ -39,6 +40,7 @@ const HomePage = () => {
   return (
     <DeviceContext.Provider value={isMobile}>
       <Main description={"The Ultimate Student Community | Empowering other student communities"}>
+        <MobileNavbar />
         <div className={container}>
           <div className={bimg}>
             <div className={introBox}>
