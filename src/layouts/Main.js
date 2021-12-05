@@ -20,6 +20,7 @@ const Main = (props) => {
       <Navbar toggleText='Team' toggleLink='team' SideNavbar={SideNavbar} handleSideNavbar={handleSideNavbar} />
       <div id="wrapper">
         {props.children}
+
       </div>
     </HelmetProvider>
   )
