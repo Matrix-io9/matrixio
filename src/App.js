@@ -18,7 +18,6 @@ function App() {
           <DeviceContext.Provider value={isMobile}>
             <Route exact path="/" component={Home} status={200} />
             <Route path="/team" component={Team} />
-
             {/* <Route path="*" component={Error} status={404} /> */}
           </DeviceContext.Provider>
         </Suspense>
