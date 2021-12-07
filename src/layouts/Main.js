@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
+
 import Navbar from '../components/Navbar/Navbar';
 import './Main.css';
 
