@@ -106,22 +106,6 @@
   line-height: 23px;
 }
 
-.snapshots {
-  /* position: relative; */
-  display: flex;
-  align-items: center;
-  /* height: 16rem; */
-  width: 25rem;
-  height: auto;
-}
-
-.image {
-  width: auto;
-  height: 14rem;
-  position: absolute;
-  /* top: 0; */
-}
-
 .footerContainer {
   width: 100%;
   display: flex;

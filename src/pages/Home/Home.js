@@ -7,10 +7,6 @@ import Footer from "../../components/Footer/Footer.js";
 import useMediaQuery from "../../hooks/useMediaQuery.js";
 
 import './Home.css';
-import One from '../../images/ss/1.png'
-import Two from '../../images/ss/2.png'
-import Three from '../../images/ss/3.jpg'
-import Four from '../../images/ss/4.png'
 
 import {
   container,
@@ -21,9 +17,6 @@ import {
   contentHeadingOne,
   contentHeadingTwo,
   contentAbout,
-  snapshots,
-  imagefirst,
-  image,
   wave,
   waves
 
@@ -32,6 +25,7 @@ import CommunityPartners from "../../components/CommunityPartners/CommunityPartn
 import JoinCommunity from "../../components/JoinCommunity/JoinCommunity";
 import Newsletter from "../../components/Newsletter/Newsletter";
 import MobileNavbar from "../../components/MobileNavbar/MobileNavbar";
+import Snapshots from "../../components/Snapshots/Snapshots";
 
 const HomePage = (props) => {
   const isMobile = useMediaQuery('(max-width: 700px)');
@@ -52,12 +46,7 @@ const HomePage = (props) => {
                 <hr style={{ width: '60%', color: '#fda611', borderStyle: 'solid', height: 0, boxSizing: 'content-box' }} />
                 <div className={contentAbout}>We empower not only the students as well as the communities which are part of our community.</div>
               </div>
-              <div className={snapshots}>
-                <img className={image} id={imagefirst} src={One} alt="1" />
-                <img className={image} id={imagefirst} src={Two} alt="2" />
-                <img className={image} id={imagefirst} src={Three} alt="3" />
-                <img className={image} id={imagefirst} src={Four} alt="4" />
-              </div>
+              <Snapshots />
             </div>
           </div>
           <About />

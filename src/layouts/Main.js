@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
@@ -21,7 +21,6 @@ const Main = (props) => {
       <Navbar toggleText='Team' toggleLink='team' SideNavbar={SideNavbar} handleSideNavbar={handleSideNavbar} />
       <div id="wrapper">
         {props.children}
-
       </div>
     </HelmetProvider>
   )

@@ -2,6 +2,8 @@ import React from "react";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import TeamCard from "../../components/TeamCard/TeamCard";
+import MobileNavbar from "../../components/MobileNavbar/MobileNavbar";
+
 import {
     teamContainer,
     teamCards,
@@ -24,11 +26,10 @@ import ArchieParliya from '../../images/team/ArchieParliya.jpg'
 import KritiSharma from '../../images/team/KritiSharma.jpeg'
 import KaustubDuttPandey from '../../images/team/KaustubDuttPandey.jpg'
 
-const Team = () => {
+const Team = (props) => {
     return (
         <Main description={"Team behind Matrix.io Student Comumunity"}>
-            <Navbar toggleText='Home' toggleLink='' />
-
+            <MobileNavbar SideNavbar={props.SideNavbar} />
             <div className={teamContentIntro}>
                 <div className={teamContentHeading}>
                     Team

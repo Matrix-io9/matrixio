@@ -1,0 +1,14 @@
+.snapshots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  border: 3px solid white;
+}
+
+.image {
+  width: auto;
+  height: 14rem;
+  position: absolute;
+  /* top: 0; */
+}

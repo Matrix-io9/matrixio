@@ -1,0 +1,12 @@
+.carousel-root {
+  width: 32rem;
+  height: auto;
+}
+
+.thumbs.animated {
+  display: none;
+}
+
+.thumbs-wrapper {
+  margin: 0;
+}
