@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from '../Logo/Logo.js';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { FaBars } from 'react-icons/fa';
 import styled from 'styled-components';
@@ -28,6 +28,20 @@ const Bars = styled(FaBars)`
 `;
 
 const Navbar = (props) => {
+  const location = useLocation().pathname
+  const [Path, setPath] = useState("/team");
+  const [PathName, setPathName] = useState("Team");
+
+  useEffect(() => {
+    if (location.localeCompare("/team")) {
+      setPath("/team");
+      setPathName("Team");
+    }
+    else {
+      setPath("/");
+      setPathName("Home");
+    }
+  }, [location])
 
   const [Navbar, setNavbar] = useState(false);
   const changeBackground = () => {
@@ -44,10 +58,19 @@ const Navbar = (props) => {
     <div className={Navbar ? `${navbar} ${active} ${autofix}` : `${navbar} ${autofix}`}>
       <Logo />
       <div className={navLinks}>
-        <Link className={navLink} to={`/${props.toggleLink}`}>{props.toggleText}</Link>
-        <Link className={navLink} to='#events'>Events</Link>
-        <Link className={navLink} to='#about'>About</Link>
-        <Link className={navLink} to='#partners'>Partners</Link>
+        {
+          location === "/team"
+            ?
+            <Link className={navLink} to={Path}>{PathName}</Link>
+            :
+            <>
+              <Link className={navLink} to={Path}>{PathName}</Link>
+              <a className={navLink} href="#events">Events</a>
+              <a className={navLink} href='#about'>About</a>
+              <a className={navLink} href='#partners'>Partners</a>
+            </>
+        }
+
       </div>
       {Navbar ?
         <Bars onClick={props.handleSideNavbar()} color="rgb(4, 97, 233)" toggleText='Team' toggleLink='team' /> : <Bars onClick={props.handleSideNavbar()} toggleText='Team' toggleLink='team' />

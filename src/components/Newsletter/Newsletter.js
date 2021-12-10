@@ -13,6 +13,7 @@ import {
 } from './Newsletter.module.css'
 
 import NewsLetter from "../../images/icons/newsletter.jpg";
+import SendData from '../../services/NewsletterService';
 
 function Newsletter() {
     return (
@@ -44,6 +45,7 @@ function Newsletter() {
                             setTimeout(() => {
                                 alert(JSON.stringify(values, null, 2));
                                 setSubmitting(false);
+                                SendData(values.email, values.name)
                             }, 400);
                         }}
                     >

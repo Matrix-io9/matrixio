@@ -18,7 +18,7 @@ const Main = (props) => {
         {props.title && <title>{props.title}</title>}
         <meta name="description" content={props.description} />
       </Helmet>
-      <Navbar toggleText='Team' toggleLink='team' SideNavbar={SideNavbar} handleSideNavbar={handleSideNavbar} />
+      <Navbar SideNavbar={SideNavbar} handleSideNavbar={handleSideNavbar} />
       <div id="wrapper">
         {props.children}
       </div>
