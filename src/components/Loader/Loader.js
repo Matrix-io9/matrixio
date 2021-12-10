@@ -1,50 +1,26 @@
 import React from 'react';
-import {
-dots,
-dotS,
-dotF,
-dotL,
-dotZ,
-dotT,
+import Spinner from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-}
-  from './Loader.module.css'
+import {
+  container,
+  text
+} from './Loader.module.css'
 
 const Loader = () => {
-  //   let $ = (e) => document.querySelector(e);
-
-  // // Dots
-  // // ====
-  // let dots = $(".dots");
-
-  // // Function
-  // // ========
-  // function animate(element, className) {
-  //   element.classList.add(className);
-  //   setTimeout(() => {
-  //     element.classList.remove(className);
-  //     setTimeout(() => {
-  //       animate(element, className);
-  //     }, 500);
-  //   }, 2500);
-  // }
-
-  // // Execution
-  // // =========
-  // animate(dots, "dots--animate");
-
   return (
-    <>
-      <div className={dots}>
-        <span className={dotZ}></span>
-        <span className={dotF}></span>
-        <span className={dotS}></span>
-        <span className={dotT}>
-          <span className={dotL}></span>
-          Loading...
-        </span>
-      </div>
-    </>
+    <div className={container}>
+      <Spinner
+        type="Rings"
+        color="#00BFFF"
+        height={100}
+        width={100}
+        timeout={3000} //3 secs
+      />
+      <span className={text}>
+        Loading
+      </span>
+    </div>
   )
 }
 

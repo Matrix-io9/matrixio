@@ -54,6 +54,9 @@ const Navbar = (props) => {
   }
   window.addEventListener('scroll', changeBackground);
 
+  console.log(props.SideNavbar)
+  console.log(props.showSideNavbar())
+  console.log(props.SideNavbar)
   return (
     <div className={Navbar ? `${navbar} ${active} ${autofix}` : `${navbar} ${autofix}`}>
       <Logo />
@@ -73,7 +76,7 @@ const Navbar = (props) => {
 
       </div>
       {Navbar ?
-        <Bars onClick={props.handleSideNavbar()} color="rgb(4, 97, 233)" toggleText='Team' toggleLink='team' /> : <Bars onClick={props.handleSideNavbar()} toggleText='Team' toggleLink='team' />
+        <Bars onClick={props.handleSideNavbar} color="rgb(4, 97, 233)" /> : <Bars onClick={props.handleSideNavbar} />
       }
 
     </div>

@@ -1,5 +1,6 @@
 import React, { createContext } from "react";
 import Main from '../../layouts/Main'
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 // import DiscordBtn from ".8./../components/DiscordBtn/DiscordBtn.js";
 import About from "../../components/About/About.js";
 import Event from '../../components/Events/Event.js';
