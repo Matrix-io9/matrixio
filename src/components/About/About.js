@@ -34,6 +34,7 @@ const About = () => {
                 <span className={firstLetter}>We </span>advance knowledge by Colloborating with multiple communities for single event.
               </p>
             </div>
+            {/* lasan aadi */}
           </div>
         </div>
         <div className={aboutContainer}>
