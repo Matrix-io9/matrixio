@@ -25,7 +25,6 @@ import {
 import CommunityPartners from "../../components/CommunityPartners/CommunityPartners";
 import JoinCommunity from "../../components/JoinCommunity/JoinCommunity";
 import Newsletter from "../../components/Newsletter/Newsletter";
-import MobileNavbar from "../../components/MobileNavbar/MobileNavbar";
 import Snapshots from "../../components/Snapshots/Snapshots";
 
 const HomePage = (props) => {
@@ -35,7 +34,6 @@ const HomePage = (props) => {
   return (
     <DeviceContext.Provider value={isMobile}>
       <Main description={"The Ultimate Student Community | Empowering other student communities"}>
-        <MobileNavbar SideNavbar={props.SideNavbar} />
         <div className={container}>
           <div className={bimg}>
             <div className={introBox}>
