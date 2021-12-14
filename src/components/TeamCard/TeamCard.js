@@ -13,7 +13,6 @@ import {
 import Twitter from '../../images/icons/twitter.png'
 import Linkedin from '../../images/icons/linkedin.png'
 const TeamCard = (props) => {
-    console.log(props.src)
     return (
         <div className={teamCard}>
             <img src={props.src} alt={props.alt} className={image} />

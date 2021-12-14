@@ -1,7 +1,6 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
 import TeamCard from "../../components/TeamCard/TeamCard";
-import MobileNavbar from "../../components/MobileNavbar/MobileNavbar";
 
 import {
     teamContainer,
@@ -28,7 +27,6 @@ import KaustubDuttPandey from '../../images/team/KaustubDuttPandey.jpg'
 const Team = (props) => {
     return (
         <Main description={"Team behind Matrix.io Student Comumunity"}>
-            <MobileNavbar SideNavbar={props.SideNavbar} />
             <div className={teamContentIntro}>
                 <div className={teamContentHeading}>
                     Team

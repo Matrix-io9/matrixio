@@ -19,6 +19,7 @@ function MobileNavbar(props) {
     const [showNavbar, setNavbar] = useState(true);
     const navbarHandler = () => {
         setNavbar(false)
+        console.log("clicked")
     }
 
     useEffect(() => {
