@@ -9,8 +9,6 @@ import {
 } from './EventCard.module.css';
 
 import DiscordBtn from '../DiscordBtn/DiscordBtn';
-import { Link } from 'react-router-dom';
-
 function EventCard(props) {
     return (
         <div className={container}>
@@ -24,10 +22,10 @@ function EventCard(props) {
                         <DiscordBtn url='https://discord.gg/Rp4VPSYfvm' />
                     </div>
                     <div className={link}>
-                        <Link onClick={() => window.open(props.eventWebsite, "_blank")}>
+                        <div onClick={() => window.open(props.eventWebsite, "_blank")}>
                             {props.eventName}
                             <img src="https://img.icons8.com/material-outlined/24/000000/external-link.png" alt="" />
-                        </Link>
+                        </div>
                     </div>
                 </div>
             </div>

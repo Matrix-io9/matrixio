@@ -22,8 +22,8 @@ function CommunityPartners() {
             <hr />
             <div className={InnerContainer}>
                 {
-                    images.map((image) => {
-                        return <CommunityCard path={image.default} />
+                    images.map((image, index) => {
+                        return <CommunityCard key={index} path={image.default} />
                     })
                 }
             </div>

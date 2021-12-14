@@ -12,6 +12,7 @@ import {
   active,
   autofix
 } from './Navbar.module.css';
+import MobileNavbar from "../MobileNavbar/MobileNavbar.js";
 
 const Bars = styled(FaBars)`
   display: none;
@@ -31,6 +32,12 @@ const Navbar = (props) => {
   const location = useLocation().pathname
   const [Path, setPath] = useState("/team");
   const [PathName, setPathName] = useState("Team");
+  const [Navbar, setNavbar] = useState(false);
+  const [showMobileNavbar, setMobileNavbar] = useState(false);
+
+  const handleMobileNavbar = () => {
+    showMobileNavbar ? setMobileNavbar(false) : setMobileNavbar(true);
+  }
 
   useEffect(() => {
     if (location.localeCompare("/team")) {
@@ -43,7 +50,6 @@ const Navbar = (props) => {
     }
   }, [location])
 
-  const [Navbar, setNavbar] = useState(false);
   const changeBackground = () => {
     if (window.scrollY >= 80) {
       setNavbar(true);
@@ -54,11 +60,13 @@ const Navbar = (props) => {
   }
   window.addEventListener('scroll', changeBackground);
 
-  console.log(props.SideNavbar)
-  console.log(props.showSideNavbar())
-  console.log(props.SideNavbar)
   return (
     <div className={Navbar ? `${navbar} ${active} ${autofix}` : `${navbar} ${autofix}`}>
+      {showMobileNavbar ?
+        <MobileNavbar />
+        :
+        <></>
+      }
       <Logo />
       <div className={navLinks}>
         {
@@ -76,7 +84,7 @@ const Navbar = (props) => {
 
       </div>
       {Navbar ?
-        <Bars onClick={props.handleSideNavbar} color="rgb(4, 97, 233)" /> : <Bars onClick={props.handleSideNavbar} />
+        <Bars onClick={handleMobileNavbar} color="rgb(4, 97, 233)" /> : <Bars onClick={handleMobileNavbar} />
       }
 
     </div>

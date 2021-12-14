@@ -4,7 +4,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import {
     snapshots,
-    imagefirst,
     image,
 } from './Snapshots.module.css';
 import './Snapshots.css';
@@ -18,10 +17,10 @@ function Snapshots() {
     return (
         <div className={snapshots}>
             <Carousel axis='horizontal' infiniteLoop={true} autoPlay useKeyboardArrows transitionTime={1000} dynamicHeight={true} preventMovementUntilSwipeScrollTolerance={true}>
-                <img className={image} id={imagefirst} src={One} alt="1" />
-                <img className={image} id={imagefirst} src={Two} alt="2" />
-                <img className={image} id={imagefirst} src={Three} alt="3" />
-                <img className={image} id={imagefirst} src={Four} alt="4" />
+                <img className={image} src={One} alt="1" />
+                <img className={image} src={Two} alt="2" />
+                <img className={image} src={Three} alt="3" />
+                <img className={image} src={Four} alt="4" />
             </Carousel>
         </div>
     )

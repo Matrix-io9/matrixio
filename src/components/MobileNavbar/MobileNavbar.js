@@ -5,14 +5,21 @@ import {
     container,
     navLink,
     navLinks,
-    icon
+    icon,
+    close,
+    open
 } from './MobileNavbar.module.css';
+
 import CloseIcon from '../../images/icons/close.png';
 
 function MobileNavbar(props) {
     const location = useLocation().pathname
     const [Path, setPath] = useState("/team");
     const [PathName, setPathName] = useState("Team");
+    const [showNavbar, setNavbar] = useState(true);
+    const navbarHandler = () => {
+        setNavbar(false)
+    }
 
     useEffect(() => {
         if (location.localeCompare("/team")) {
@@ -25,12 +32,8 @@ function MobileNavbar(props) {
         }
     }, [location])
 
-    console.log(props.SideNavbar)
-    // if (props.SideNavbar) {
-    //     container.display = "flex";
-    // }
     return (
-        <div className={container}>
+        <div className={`${container} ${showNavbar ? open : close}`}>
             <div className={navLinks}>
                 {
                     location === "/team"
@@ -45,7 +48,7 @@ function MobileNavbar(props) {
                         </>
                 }
             </div>
-            <img className={icon} src={CloseIcon} alt="Close" />
+            <img className={icon} onClick={navbarHandler} src={CloseIcon} alt="Close" />
         </div>
     )
 }
