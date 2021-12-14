@@ -29,6 +29,7 @@ import Snapshots from "../../components/Snapshots/Snapshots";
 
 const HomePage = (props) => {
   const isMobile = useMediaQuery('(max-width: 700px)');
+
   const DeviceContext = createContext(false);
 
   return (
