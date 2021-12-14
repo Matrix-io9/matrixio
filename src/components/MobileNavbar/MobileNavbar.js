@@ -38,13 +38,13 @@ function MobileNavbar(props) {
                 {
                     location === "/team"
                         ?
-                        <Link className={navLink} to={Path}>{PathName}</Link>
+                        <Link className={navLink} onClick={navbarHandler} to={Path}>{PathName}</Link>
                         :
                         <>
-                            <Link className={navLink} to={Path}>{PathName}</Link>
-                            <a className={navLink} href="#events">Events</a>
-                            <a className={navLink} href='#about'>About</a>
-                            <a className={navLink} href='#partners'>Partners</a>
+                            <Link className={navLink} to={Path} onClick={navbarHandler}>{PathName}</Link>
+                            <a className={navLink} onClick={navbarHandler} href="#events">Events</a>
+                            <a className={navLink} onClick={navbarHandler} href='#about'>About</a>
+                            <a className={navLink} onClick={navbarHandler} href='#partners'>Partners</a>
                         </>
                 }
             </div>
