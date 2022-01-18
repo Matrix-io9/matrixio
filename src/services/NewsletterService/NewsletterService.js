@@ -1,5 +1,4 @@
 import { supabase } from './supabaseClient'
-import DialogBox from '../../components/DialogBox/DialogBox'
 
 async function checkUserExists(email) {
     const { data, error } = await supabase
@@ -23,7 +22,7 @@ async function checkUserExists(email) {
 }
 
 async function InsertUser(username, email) {
-    const { data, error } = await supabase
+    const { error } = await supabase
         .from('newsletter_members')
         .insert([
             {
