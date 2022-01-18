@@ -8,6 +8,15 @@
   overflow: hidden;
 }
 
+.link {
+  background-color: white;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9px;
+}
 .container .card:before {
   content: "";
   position: absolute;
@@ -153,4 +162,11 @@
   opacity: 1;
   transform: translateY(0px);
   transition-delay: 0.75s;
+}
+
+.contentBx {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

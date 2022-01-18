@@ -21,11 +21,9 @@ function EventCard(props) {
                     <div className={btn}>
                         <DiscordBtn url='https://discord.gg/Rp4VPSYfvm' />
                     </div>
-                    <div className={link}>
-                        <div onClick={() => window.open(props.eventWebsite, "_blank")}>
-                            {props.eventName}
-                            <img src="https://img.icons8.com/material-outlined/24/000000/external-link.png" alt="" />
-                        </div>
+                    <div className={link} onClick={() => window.open(props.eventWebsite, "_blank")}>
+                        {props.eventName}
+                        <img src="https://img.icons8.com/material-outlined/24/000000/external-link.png" alt="" />
                     </div>
                 </div>
             </div>

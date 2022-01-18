@@ -10,6 +10,7 @@ import Linkedin from '../../images/icons/linkedin.png'
 import Twitter from '../../images/icons/twitter.png'
 import Discord from '../../images/icons/discord.svg'
 import Instagram from '../../images/icons/instagram.png'
+import Sceptrum from '../../images/icons/sceptrum.svg'
 
 function JoinCommunity() {
     return (
@@ -30,6 +31,11 @@ function JoinCommunity() {
             <div className={socialmedia}>
                 <a href="https://twitter.com/Matrixio9" target="_blank" rel="noreferrer">
                     <img className={image} src={Twitter} alt="Twitter" />
+                </a>
+            </div>
+            <div className={socialmedia}>
+                <a href="https://sceptrum.medium.com/" target="_blank" rel="noreferrer">
+                    <img className={image} src={Sceptrum} alt="Blog" />
                 </a>
             </div>
             <div className={socialmedia}>

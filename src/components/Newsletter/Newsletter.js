@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import SubscribeUser from '../../services/NewsletterService/NewsletterService'
 
 import {
     container,
@@ -13,9 +14,19 @@ import {
 } from './Newsletter.module.css'
 
 import NewsLetter from "../../images/icons/newsletter.jpg";
-import SendData from '../../services/NewsletterService';
+import { supabase } from '../../services/NewsletterService/supabaseClient';
 
 function Newsletter() {
+    const [session, setSession] = useState(null)
+
+    useEffect(() => {
+        setSession(supabase.auth.session())
+
+        supabase.auth.onAuthStateChange((_event, session) => {
+            setSession(session)
+        })
+    }, [session])
+
     return (
         <>
             <div className={container}>
@@ -41,11 +52,13 @@ function Newsletter() {
                             }
                             return errors;
                         }}
-                        onSubmit={(values, { setSubmitting }) => {
+                        onSubmit={(values, { setSubmitting, resetForm }) => {
                             setTimeout(() => {
-                                alert(JSON.stringify(values, null, 2));
+                                setSubmitting(true)
+                                const { name, email } = values;
+                                SubscribeUser(name, email);
                                 setSubmitting(false);
-                                SendData(values.email, values.name)
+                                resetForm();
                             }, 400);
                         }}
                     >

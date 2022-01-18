@@ -16,7 +16,7 @@ import Four from '../../images/ss/4.png'
 function Snapshots() {
     return (
         <div className={snapshots}>
-            <Carousel axis='horizontal' infiniteLoop={true} autoPlay useKeyboardArrows transitionTime={1000} dynamicHeight={true} preventMovementUntilSwipeScrollTolerance={true}>
+            <Carousel axis='horizontal' infiniteLoop={true} autoPlay useKeyboardArrows transitionTime={1000} preventMovementUntilSwipeScrollTolerance={true} dynamicHeight={true}>
                 <img className={image} src={One} alt="1" />
                 <img className={image} src={Two} alt="2" />
                 <img className={image} src={Three} alt="3" />
