@@ -11,14 +11,7 @@
 
 .link {
   color: white;
-  text-decoration: underline;
+  text-decoration: none;
+  /* text-decoration: underline; */
 }
 
-/* .nav-links{
-  display: flex;
-  justify-content: space-between;
-  width: 87%;
-  margin-bottom: 28px;
-  position: relative;
-  bottom: 18px;
-} */
